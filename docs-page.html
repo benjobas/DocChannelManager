@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>CoderDocs - Bootstrap Documentation Template For Software Projects</title>
+    <title>Documentación</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="description" content="Bootstrap Documentation Template For Software Developers">
+    <meta name="description" content="Documentación de almacenamiento de la data - Chelenko Lodge">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -52,7 +52,7 @@
 		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-slack fa-fw"></i></a></li>
 		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-product-hunt fa-fw"></i></a></li>
 		            </ul><!--//social-list-->
-		            <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/" class="btn btn-primary d-none d-lg-flex">Download</a>
+		            
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
         </div><!--//branding-->
@@ -121,9 +121,9 @@
 		    <div class="container">
 			    <article class="docs-article" id="section-1">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 3 days ago</span></h1>
+					    <h1 class="docs-heading">Introducción <span class="docs-time">Last updated: 5 minutes ago</span></h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>Bienvenido a la documentación de la API de Chelenko, un conjunto de rutas diseñadas para interactuar de manera eficiente con la base de datos de gestión de huéspedes, habitaciones, reservas, modificaciones de tarifas e inventario del sistema Chelenko. Esta API está destinada a desarrolladores que buscan integrar y gestionar información hotelera mediante operaciones CRUD (crear, leer, actualizar, eliminar) a través de solicitudes HTTP.</p>
 						</section><!--//docs-intro-->
 						
 						<h5>Github Code Example:</h5>
@@ -602,7 +602,7 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
-			    
+			    <!-- HABITACIONES -->
 			    <article class="docs-article" id="section-3">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Habitaciones</h1>
@@ -619,9 +619,9 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-info-circle"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									GET 
 								</h4>
-								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
+								<p> <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
 						<p>Recupera una lista de todas las habitaciones registradas en la base de datos.
@@ -639,9 +639,9 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-info-circle"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									GET 
 								</h4>
-								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
+								<p> <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
 						<p>Recupera la información de una habitación específica mediante su ID.
@@ -661,7 +661,7 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-thumbs-up"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									
 								</h4>
 								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
 							</div><!--//content-->
@@ -781,28 +781,137 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 			    </article><!--//docs-article-->
 			    
 			    
-		        <article class="docs-article" id="section-6">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Web</h1>
-					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-6-1">
-						<h2 class="section-heading">Section Item 6.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
+ <!-- Modificaciones de Tarifa -->
+ <article class="docs-article" id="section-3">
+	<header class="docs-header">
+		<h1 class="docs-heading">Modificaciones de Tarifa</h1>
+		<section class="docs-intro">
+			<p>La API de modificaciones de tarifa permite gestionar la información relacionada con cambios en las tarifas de las habitaciones. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
+		</section><!--//docs-intro-->
+	</header>
+	 <section class="docs-section" id="item-3-1">
+		<h2 class="section-heading">GET ALL</h2>
+		<div class="callout-block callout-block-info">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-info-circle"></i>
+					</span><!--//icon-holder-->
 					
-					<section class="docs-section" id="item-6-2">
-						<h2 class="section-heading">Section Item 6.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
+				</h4>
+				<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p> Recupera una lista de todas las modificaciones de tarifa registradas en la base de datos, incluyendo información de la habitación asociada.
+			Respuesta:
+			Código 200: Devuelve un array con los objetos de las modificaciones de tarifa.
+			Código 500: Error en la recuperación de datos.</p>
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-3-2">
+		<h2 class="section-heading">GET BY ID</h2>
+		<div class="callout-block callout-block-info">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-info-circle"></i>
+					</span><!--//icon-holder-->
+				
+				</h4>
+				<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Recupera la información de una habitación tarifa específica mediante su ID, incluyendo información de la habitación asociada.
+			Parámetros:
+			id: ID de la  tarifa a recuperar.
+			Respuesta:
+			Código 200: Devuelve el objeto de la tarifa a recuperar.
+			Código 404: Si no se encuentra la modificación de tarifa.</p>
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-3-3">
+		<h2 class="section-heading">CREATE</h2>
+		<div class="callout-block callout-block-success">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-thumbs-up"></i>
+					</span><!--//icon-holder-->
+				
+				</h4>
+				<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Crea un nuevo registro de modificación de tarifa en la base de datos. <br>
+			Cuerpo de la solicitud:</p>
+			<div class="docs-code-block">
+				<pre class="shadow-lg rounded"><code class="json hljs">[
+{
+<span class="hljs-attr">"room"</span>: <span class="hljs-string">"ID_ROOM"</span>,
+<span class="hljs-attr">"startDate"</span>: <span class="hljs-string">"2024-10-01T00:00:00Z"</span>,
+<span class="hljs-attr">"endDate"</span>: <span class="hljs-string">"2024-10-05T00:00:00Z"</span>,
+<span class="hljs-attr">"modificationType"</span>: <span class="hljs-string">"PRICE_CHANGE"</span>,
+<span class="hljs-attr">"value"</span>: <span class="hljs-string">120</span>,
+<span class="hljs-attr">"reason"</span>: <span class="hljs-string">"Aumento de tarifas para temporada alta"</span>,
+<span class="hljs-attr">"channel"</span>: <span class="hljs-string">"DIRECT"</span>
+			}
+			  ]
+			  </code></pre>
+			  </div>
+<p>Respuesta:
+	Código 201: Devuelve el objeto de la modificación de tarifa creada.
+	Código 400: Si faltan datos requeridos (room, startDate, endDate, modificationType, value, channel).</p>
+
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-2-4">
+		<h2 class="section-heading">PUT</h2>
+		<div class="callout-block callout-block-success">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-thumbs-up"></i>
+					</span><!--//icon-holder-->
 					
-					<section class="docs-section" id="item-6-3">
-							<h2 class="section-heading">Section Item 6.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p> Actualiza la información de una habitación existente mediante su ID.</p>
+		<p>Parámetros: <br>
+			id: ID de la modificación de tarifa a actualizar.</p>
+		<p>Cuerpo de la solicitud: <br>
+			Se pueden enviar los mismos campos que para crear una nueva modificación de tarifa, omitiendo aquellos que no se deseen actualizar.</p>
+		<p>Respuesta: <br>
+			Código 200: Devuelve el objeto de la modificación de tarifa actualizada. <br>
+			Código 404: Si no se encuentra la modificación de tarifa.
+		</p>
+	</section><!--//section-->
+	<section class="docs-section" id="item-2-5">
+		<h2 class="section-heading">DELETE</h2>
+		<div class="callout-block callout-block-danger me-1">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder">
+						<i class="fas fa-exclamation-triangle"></i>
+					</span><!--//icon-holder-->
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code> </p>
+			</div><!--//content-->
+	</div><!--//callout-block-->
+		<p>Elimina un registro de una modificación de tarifa  específico de la base de datos.</p>
+		<p>Parámetro: ID de la modificación de tarifa a eliminar.</p>
+		<p>El cuerpo de la solicitud es JSON</p>
+		  <p>
+			Respuesta:
+			Código 204: la modificación de tarifa se ha eliminado correctamente.
+			Código 404: Si no se encuentra la modificación de tarifa.							
+		  </p>
+	</section><!--//section-->
+</article><!--//docs-article-->
 			    
 			    
 			    <footer class="footer">
