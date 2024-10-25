@@ -94,8 +94,25 @@ var spy = new Gumshoe('#docs-nav a', {
 var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
 
 
-
-
+/*  ===== CopyButton ===== */
+document.querySelectorAll('.copyButton').forEach(button => {
+	button.addEventListener('click', () => {
+	  const codeId = button.getAttribute('data-code-id');
+	  const codeBlock = document.getElementById(codeId);
+	  
+	  if (codeBlock) {
+		navigator.clipboard.writeText(codeBlock.innerText)
+		  .then(() => {
+			alert('JSON copiado al portapapeles');
+		  })
+		  .catch(err => {
+			console.error('Error al copiar el texto: ', err);
+		  });
+	  } else {
+		console.error('Código no encontrado');
+	  }
+	});
+  });
 
 
 

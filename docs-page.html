@@ -480,9 +480,14 @@
 						
 						<p>
 							Recupera una lista de todos los huéspedes registrados en la base de datos.
-							Respuesta:
-							Código 200: Devuelve un array con los objetos de los huéspedes.
-							Código 500: Error en la recuperación de datos.</p>
+
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de los huéspedes.
+							  </div>
+							<div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.	
+							  </div>		
+</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-2">
@@ -499,11 +504,14 @@
 								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
-						<p>Recupera la información de un huésped específico mediante su ID. Parámetros:
-							id: ID del huésped a recuperar.
-							Respuesta:
-							Código 200: Devuelve el objeto del huésped.
-							Código 404: Si no se encuentra el huésped.
+						<p>Recupera la información de un huésped específico mediante su ID. <p>Parámetros:</p>
+							<p>ID del huésped a recuperar.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto del huésped.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.	
+							  </div>		
 							</p>
 					</section><!--//section-->
 					
@@ -522,8 +530,12 @@
                         </div><!--//callout-block-->
 						<p>Crea un nuevo registro de huésped en la base de datos.</p>
 						<p>El cuerpo de la solicitud es JSON</p>
+						
 						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">[
+							<div class="d-flex justify-content-end">
+								<button class="copyButton btn btn-primary" data-code-id="code1">Copiar</button>
+							  </div>
+							<pre class="shadow-lg rounded"><code class="json hljs" id="code1">[
 	{
 	<span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Nombre"</span>,
 	<span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Apellido"</span>,
@@ -547,9 +559,12 @@
 						  </code></pre>
 						  </div>
 						  <p>
-							Respuesta:
-Código 201: Devuelve el objeto del huésped creado.
-Código 400: Si faltan datos requeridos (firstName, lastName, email).
+							<div class="alert alert-primary" role="alert">
+								Código 201: Devuelve el objeto del huésped creado.
+							  </div>
+<div class="alert alert-danger" role="alert">
+	Código 400: Si faltan datos requeridos (firstName, lastName, email).	
+  </div>		
 						  </p>
 					</section><!--//section-->
 
@@ -572,9 +587,12 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>Se pueden enviar los mismos campos que para crear un nuevo huésped, omitiendo aquellos que no se deseen actualizar.
 						</p>
 						  <p>
-							Respuesta:
-							Código 200: Devuelve el objeto del huésped actualizado.
-							Código 404: Si no se encuentra el huésped.
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto del huésped actualizado.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.		
+							  </div>		
 						  </p>
 					</section><!--//section-->
 
@@ -595,9 +613,13 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>Parámetro: ID del huésped a eliminar</p>
 						<p>El cuerpo de la solicitud es JSON</p>
 						  <p>
-							Respuesta:
-							Código 204: El huésped se ha eliminado correctamente.
-							Código 404: Si no se encuentra el huésped.							
+							<div class="alert alert-primary" role="alert">
+								Código 204: El huésped se ha eliminado correctamente.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.		
+							  </div>					
 						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
