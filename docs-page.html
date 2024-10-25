@@ -687,9 +687,50 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-3-4">
-						<h2 class="section-heading">Section Item 3.4</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">PUT</h2>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                PUT
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p> Actualiza la información de una habitación existente mediante su ID.</p>
+						<p>Parámetros: <br>
+							id: ID de la habitación a actualizar.</p>
+						<p>Cuerpo de la solicitud: <br>
+							Se pueden enviar los mismos campos que para crear una nueva habitación, omitiendo aquellos que no se deseen actualizar.</p>
+						<p>Respuesta: <br>
+							Código 200: Devuelve el objeto de la habitación actualizada. <br>
+							Código 404: Si no se encuentra la habitación.
+						</p>
+					</section><!--//section-->
+					<section class="docs-section" id="item-2-5">
+						<h2 class="section-heading">DELETE</h2>
+						<div class="callout-block callout-block-danger me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                DELETE
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code> </p>
+                            </div><!--//content-->
+					</div><!--//callout-block-->
+						<p>Elimina un registro de habitación  específico de la base de datos.</p>
+						<p>Parámetro: ID del habitación  a eliminar.</p>
+						<p>El cuerpo de la solicitud es JSON</p>
+						  <p>
+							Respuesta:
+							Código 204: El habitación  se ha eliminado correctamente.
+							Código 404: Si no se encuentra el habitación.							
+						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
