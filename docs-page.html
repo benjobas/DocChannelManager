@@ -627,25 +627,87 @@
 			    
 			    <article class="docs-article" id="section-3">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">APIs</h1>
+					    <h1 class="docs-heading">Habitaciones</h1>
 					    <section class="docs-intro">
-						    <p>AQUI VAMOS A EMPEZAR EL MODO PEPE</p>
+						    <p>La API de habitaciones permite gestionar la información de las habitaciones mediante diversas rutas. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-3-1">
-						<h2 class="section-heading">Section Item 3.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET ALL</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									RUTA
+								</h4>
+								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera una lista de todas las habitaciones registradas en la base de datos.
+							Respuesta:
+							Código 200: Devuelve un array con los objetos de las habitaciones.
+							Código 500: Error en la recuperación de datos.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-2">
-						<h2 class="section-heading">Section Item 3.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET BY ID</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									RUTA
+								</h4>
+								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera la información de una habitación específica mediante su ID.
+							Parámetros:
+							id: ID de la habitación a recuperar.
+							Respuesta:
+							Código 200: Devuelve el objeto de la habitación.
+							Código 404: Si no se encuentra la habitación.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-3">
-						<h2 class="section-heading">Section Item 3.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section>
+						<h2 class="section-heading">CREATE</h2>
+						<div class="callout-block callout-block-success">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-thumbs-up"></i>
+									</span><!--//icon-holder-->
+									RUTA
+								</h4>
+								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Crea un nuevo registro de habitación en la base de datos.
+							Cuerpo de la solicitud:</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="json hljs">[
+		{
+		<span class="hljs-attr">"roomNumber"</span>: <span class="hljs-string">"101"</span>,
+		<span class="hljs-attr">"type"</span>: <span class="hljs-string">"SINGLE"</span>,
+		<span class="hljs-attr">"basePrice"</span>: <span class="hljs-string">"100"</span>,
+		<span class="hljs-attr">"capacity"</span>: <span class="hljs-string">"1"</span>,
+		<span class="hljs-attr">"amenities"</span>: <span class="hljs-string">["Wi-Fi", "TV"]</span>,
+		<span class="hljs-attr">"status"</span>: <span class="hljs-string">"AVAILABLE"</span>,
+		<span class="hljs-attr">"description"</span>: <span class="hljs-string">"Habitación cómoda con vista al mar."</span>,
+		<span class="hljs-attr">"images"</span>: <span class="hljs-string">["url_imagen1", "url_imagen2"]</span>
+		
+							}
+							  ]
+							  </code></pre>
+							  </div>
+
+					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-4">
 						<h2 class="section-heading">Section Item 3.4</h2>

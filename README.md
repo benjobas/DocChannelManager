@@ -66,6 +66,9 @@ id: ID del huésped a eliminar.
 Respuesta:
 Código 204: El huésped se ha eliminado correctamente.
 Código 404: Si no se encuentra el huésped.
+
+
+
 http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms
 Rutas de la API para Habitaciones
 La API de habitaciones permite gestionar la información de las habitaciones mediante diversas rutas. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.
@@ -76,6 +79,7 @@ Descripción: Recupera una lista de todas las habitaciones registradas en la bas
 Respuesta:
 Código 200: Devuelve un array con los objetos de las habitaciones.
 Código 500: Error en la recuperación de datos.
+
 2. Obtener una habitación específica
 Ruta: GET http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id
 Descripción: Recupera la información de una habitación específica mediante su ID.
@@ -84,6 +88,7 @@ id: ID de la habitación a recuperar.
 Respuesta:
 Código 200: Devuelve el objeto de la habitación.
 Código 404: Si no se encuentra la habitación.
+
 3. Crear una nueva habitación
 Ruta: POST http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms
 Descripción: Crea un nuevo registro de habitación en la base de datos.
@@ -103,6 +108,7 @@ Copiar código
 Respuesta:
 Código 201: Devuelve el objeto de la habitación creada.
 Código 400: Si faltan datos requeridos (roomNumber, type, basePrice, capacity).
+
 4. Actualizar una habitación existente
 Ruta: PUT http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id
 Descripción: Actualiza la información de una habitación existente mediante su ID.
