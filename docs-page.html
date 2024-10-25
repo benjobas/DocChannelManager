@@ -601,12 +601,12 @@
 					
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">CREATE</h2>
-						<div class="callout-block callout-block-info">
+						<div class="callout-block callout-block-success">
                             
 							<div class="content">
 								<h4 class="callout-title">
 									<span class="callout-icon-holder me-1">
-										<i class="fas fa-info-circle"></i>
+										<i class="fas fa-thumbs-up"></i>
 									</span><!--//icon-holder-->
 									RUTA
 								</h4>
@@ -615,6 +615,23 @@
 						</div><!--//callout-block-->
 						<p>Crea un nuevo registro de habitación en la base de datos.
 							Cuerpo de la solicitud:</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="json hljs">[
+		{
+		<span class="hljs-attr">"roomNumber"</span>: <span class="hljs-string">"101"</span>,
+		<span class="hljs-attr">"type"</span>: <span class="hljs-string">"SINGLE"</span>,
+		<span class="hljs-attr">"basePrice"</span>: <span class="hljs-string">"100"</span>,
+		<span class="hljs-attr">"capacity"</span>: <span class="hljs-string">"1"</span>,
+		<span class="hljs-attr">"amenities"</span>: <span class="hljs-string">["Wi-Fi", "TV"]</span>,
+		<span class="hljs-attr">"status"</span>: <span class="hljs-string">"AVAILABLE"</span>,
+		<span class="hljs-attr">"description"</span>: <span class="hljs-string">"Habitación cómoda con vista al mar."</span>,
+		<span class="hljs-attr">"images"</span>: <span class="hljs-string">["url_imagen1", "url_imagen2"]</span>
+		
+							}
+							  ]
+							  </code></pre>
+							  </div>
+
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-4">
