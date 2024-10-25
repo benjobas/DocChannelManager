@@ -472,9 +472,9 @@
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-info-circle"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									GET
 								</h4>
-								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests</a></code></p>
+								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
 						
@@ -486,13 +486,66 @@
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-2">
-						<h2 class="section-heading">Section Item 2.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET by ID</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									GET
+								</h4>
+								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera la información de un huésped específico mediante su ID. Parámetros:
+							id: ID del huésped a recuperar.
+							Respuesta:
+							Código 200: Devuelve el objeto del huésped.
+							Código 404: Si no se encuentra el huésped.
+							</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-3">
-						<h2 class="section-heading">Section Item 2.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">CREATE</h2>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                POST
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests</a></code></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Crea un nuevo registro de huésped en la base de datos.</p>
+						<p>El cuerpo de la solicitud es JSON</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">[
+	{
+	<span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Nombre"</span>,
+	<span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Apellido"</span>,
+	<span class="hljs-attr">"email"</span>: <span class="hljs-string">"correo@example.com"</span>,
+	<span class="hljs-attr">"phone"</span>: <span class="hljs-string">"123456789"</span>,
+	<span class="hljs-attr">"nationality"</span>: <span class="hljs-string">"Nacionalidad"</span>,
+	<span class="hljs-attr">"documentType"</span>: <span class="hljs-string">"PASSPORT"</span>,
+	<span class="hljs-attr">"documentNumber"</span>: <span class="hljs-string">"Número de documento"</span>,
+	<span class="hljs-attr">"address"</span>: {
+		<span class="hljs-attr">"street"</span>: <span class="hljs-string">"Calle"</span>,
+		<span class="hljs-attr">"city"</span>: <span class="hljs-string">"Ciudad"</span>,
+		<span class="hljs-attr">"state"</span>: <span class="hljs-string">"Estado"</span>,
+		<span class="hljs-attr">"country"</span>: <span class="hljs-string">"País"</span>,
+		<span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"Código postal"</span>
+			},
+	<span class="hljs-attr">"preferences"</span>: { <span class="hljs-string">"key"</span>: <span class="hljs-string">"valor"</span> },
+	<span class="hljs-attr">"blacklisted"</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">"blacklistReason"</span>: <span class="hljs-string">"Razón"</span>
+						}
+						  ]
+						  </code></pre>
+						  </div>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
