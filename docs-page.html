@@ -480,9 +480,14 @@
 						
 						<p>
 							Recupera una lista de todos los huéspedes registrados en la base de datos.
-							Respuesta:
-							Código 200: Devuelve un array con los objetos de los huéspedes.
-							Código 500: Error en la recuperación de datos.</p>
+
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de los huéspedes.
+							  </div>
+							<div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.	
+							  </div>		
+</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-2">
@@ -499,11 +504,14 @@
 								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
-						<p>Recupera la información de un huésped específico mediante su ID. Parámetros:
-							id: ID del huésped a recuperar.
-							Respuesta:
-							Código 200: Devuelve el objeto del huésped.
-							Código 404: Si no se encuentra el huésped.
+						<p>Recupera la información de un huésped específico mediante su ID. <p>Parámetros:</p>
+							<p>ID del huésped a recuperar.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto del huésped.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.	
+							  </div>		
 							</p>
 					</section><!--//section-->
 					
@@ -522,8 +530,12 @@
                         </div><!--//callout-block-->
 						<p>Crea un nuevo registro de huésped en la base de datos.</p>
 						<p>El cuerpo de la solicitud es JSON</p>
+						
 						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">[
+							<div class="d-flex justify-content-end">
+								<button class="copyButton btn btn-primary" data-code-id="code1">Copiar</button>
+							</div>
+							<pre class="shadow-lg rounded"><code class="json hljs" id="code1">[
 	{
 	<span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Nombre"</span>,
 	<span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Apellido"</span>,
@@ -547,9 +559,12 @@
 						  </code></pre>
 						  </div>
 						  <p>
-							Respuesta:
-Código 201: Devuelve el objeto del huésped creado.
-Código 400: Si faltan datos requeridos (firstName, lastName, email).
+							<div class="alert alert-primary" role="alert">
+								Código 201: Devuelve el objeto del huésped creado.
+							  </div>
+<div class="alert alert-danger" role="alert">
+	Código 400: Si faltan datos requeridos (firstName, lastName, email).	
+  </div>		
 						  </p>
 					</section><!--//section-->
 
@@ -572,9 +587,12 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>Se pueden enviar los mismos campos que para crear un nuevo huésped, omitiendo aquellos que no se deseen actualizar.
 						</p>
 						  <p>
-							Respuesta:
-							Código 200: Devuelve el objeto del huésped actualizado.
-							Código 404: Si no se encuentra el huésped.
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto del huésped actualizado.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.		
+							  </div>		
 						  </p>
 					</section><!--//section-->
 
@@ -595,9 +613,13 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>Parámetro: ID del huésped a eliminar</p>
 						<p>El cuerpo de la solicitud es JSON</p>
 						  <p>
-							Respuesta:
-							Código 204: El huésped se ha eliminado correctamente.
-							Código 404: Si no se encuentra el huésped.							
+							<div class="alert alert-primary" role="alert">
+								Código 204: El huésped se ha eliminado correctamente.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.		
+							  </div>					
 						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
@@ -626,8 +648,13 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						</div><!--//callout-block-->
 						<p>Recupera una lista de todas las habitaciones registradas en la base de datos.
 							Respuesta:
-							Código 200: Devuelve un array con los objetos de las habitaciones.
-							Código 500: Error en la recuperación de datos.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de las habitaciones.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.	
+							  </div>	
+							</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-2">
@@ -648,8 +675,15 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 							Parámetros:
 							id: ID de la habitación a recuperar.
 							Respuesta:
-							Código 200: Devuelve el objeto de la habitación.
-							Código 404: Si no se encuentra la habitación.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto de la habitación.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la habitación.	
+							  </div>	
+							
+							</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-3">
@@ -661,7 +695,7 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-thumbs-up"></i>
 									</span><!--//icon-holder-->
-									
+									POST
 								</h4>
 								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
 							</div><!--//content-->
@@ -669,6 +703,9 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>Crea un nuevo registro de habitación en la base de datos.
 							Cuerpo de la solicitud:</p>
 							<div class="docs-code-block">
+								<div class="d-flex justify-content-end">
+									<button class="copyButton btn btn-primary" data-code-id="code3">Copiar</button>
+								</div>
 								<pre class="shadow-lg rounded"><code class="json hljs">[
 		{
 		<span class="hljs-attr">"roomNumber"</span>: <span class="hljs-string">"101"</span>,
@@ -706,8 +743,15 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>Cuerpo de la solicitud: <br>
 							Se pueden enviar los mismos campos que para crear una nueva habitación, omitiendo aquellos que no se deseen actualizar.</p>
 						<p>Respuesta: <br>
-							Código 200: Devuelve el objeto de la habitación actualizada. <br>
-							Código 404: Si no se encuentra la habitación.
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto de la habitación actualizada.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la habitación.	
+							  </div>	
+							 <br>
+							
 						</p>
 					</section><!--//section-->
 					<section class="docs-section" id="item-2-5">
@@ -728,8 +772,15 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 						<p>El cuerpo de la solicitud es JSON</p>
 						  <p>
 							Respuesta:
-							Código 204: El habitación  se ha eliminado correctamente.
-							Código 404: Si no se encuentra el habitación.							
+							<div class="alert alert-primary" role="alert">
+								Código 204: El habitación  se ha eliminado correctamente.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el habitación.	
+							  </div>	
+							
+														
 						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
@@ -782,14 +833,14 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 			    
 			    
  <!-- Modificaciones de Tarifa -->
- <article class="docs-article" id="section-3">
+ <article class="docs-article" id="section-6">
 	<header class="docs-header">
 		<h1 class="docs-heading">Modificaciones de Tarifa</h1>
 		<section class="docs-intro">
 			<p>La API de modificaciones de tarifa permite gestionar la información relacionada con cambios en las tarifas de las habitaciones. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
 		</section><!--//docs-intro-->
 	</header>
-	 <section class="docs-section" id="item-3-1">
+	 <section class="docs-section" id="item-6-1">
 		<h2 class="section-heading">GET ALL</h2>
 		<div class="callout-block callout-block-info">
 			
@@ -798,18 +849,25 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 					<span class="callout-icon-holder me-1">
 						<i class="fas fa-info-circle"></i>
 					</span><!--//icon-holder-->
-					
+					GET
 				</h4>
-				<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
+				<p>  <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
 			</div><!--//content-->
 		</div><!--//callout-block-->
 		<p> Recupera una lista de todas las modificaciones de tarifa registradas en la base de datos, incluyendo información de la habitación asociada.
 			Respuesta:
-			Código 200: Devuelve un array con los objetos de las modificaciones de tarifa.
-			Código 500: Error en la recuperación de datos.</p>
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve un array con los objetos de las modificaciones de tarifa.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 500: Error en la recuperación de datos.
+			  </div>	
+			
+			</p>
 	</section><!--//section-->
 	
-	<section class="docs-section" id="item-3-2">
+	<section class="docs-section" id="item-6-2">
 		<h2 class="section-heading">GET BY ID</h2>
 		<div class="callout-block callout-block-info">
 			
@@ -818,20 +876,27 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 					<span class="callout-icon-holder me-1">
 						<i class="fas fa-info-circle"></i>
 					</span><!--//icon-holder-->
-				
+					GET 
 				</h4>
-				<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
 			</div><!--//content-->
 		</div><!--//callout-block-->
 		<p>Recupera la información de una habitación tarifa específica mediante su ID, incluyendo información de la habitación asociada.
 			Parámetros:
 			id: ID de la  tarifa a recuperar.
 			Respuesta:
-			Código 200: Devuelve el objeto de la tarifa a recuperar.
-			Código 404: Si no se encuentra la modificación de tarifa.</p>
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve el objeto de la tarifa a recuperar.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la modificación de tarifa.	
+			  </div>	
+			
+			</p>
 	</section><!--//section-->
 	
-	<section class="docs-section" id="item-3-3">
+	<section class="docs-section" id="item-6-3">
 		<h2 class="section-heading">CREATE</h2>
 		<div class="callout-block callout-block-success">
 			
@@ -840,14 +905,17 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 					<span class="callout-icon-holder me-1">
 						<i class="fas fa-thumbs-up"></i>
 					</span><!--//icon-holder-->
-				
+			POST
 				</h4>
-				<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
+				<p> <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
 			</div><!--//content-->
 		</div><!--//callout-block-->
 		<p>Crea un nuevo registro de modificación de tarifa en la base de datos. <br>
 			Cuerpo de la solicitud:</p>
 			<div class="docs-code-block">
+				<div class="d-flex justify-content-end">
+					<button class="copyButton btn btn-primary" data-code-id="code6">Copiar</button>
+				</div>
 				<pre class="shadow-lg rounded"><code class="json hljs">[
 {
 <span class="hljs-attr">"room"</span>: <span class="hljs-string">"ID_ROOM"</span>,
@@ -862,12 +930,19 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 			  </code></pre>
 			  </div>
 <p>Respuesta:
-	Código 201: Devuelve el objeto de la modificación de tarifa creada.
-	Código 400: Si faltan datos requeridos (room, startDate, endDate, modificationType, value, channel).</p>
+	<div class="alert alert-primary" role="alert">
+		Código 201: Devuelve el objeto de la modificación de tarifa creada.
+	  </div>
+
+	<div class="alert alert-danger" role="alert">
+		Código 400: Si faltan datos requeridos (room, startDate, endDate, modificationType, value, channel).	
+	  </div>	
+	
+	</p>
 
 	</section><!--//section-->
 	
-	<section class="docs-section" id="item-2-4">
+	<section class="docs-section" id="item-6-4">
 		<h2 class="section-heading">PUT</h2>
 		<div class="callout-block callout-block-success">
 			<div class="content">
@@ -875,7 +950,7 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 					<span class="callout-icon-holder me-1">
 						<i class="fas fa-thumbs-up"></i>
 					</span><!--//icon-holder-->
-					
+					PUT
 				</h4>
 				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
 			</div><!--//content-->
@@ -886,11 +961,17 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 		<p>Cuerpo de la solicitud: <br>
 			Se pueden enviar los mismos campos que para crear una nueva modificación de tarifa, omitiendo aquellos que no se deseen actualizar.</p>
 		<p>Respuesta: <br>
-			Código 200: Devuelve el objeto de la modificación de tarifa actualizada. <br>
-			Código 404: Si no se encuentra la modificación de tarifa.
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve el objeto de la modificación de tarifa actualizada. 
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la modificación de tarifa.
+			  </div>	
+			
 		</p>
 	</section><!--//section-->
-	<section class="docs-section" id="item-2-5">
+	<section class="docs-section" id="item-6-5">
 		<h2 class="section-heading">DELETE</h2>
 		<div class="callout-block callout-block-danger me-1">
 			<div class="content">
@@ -898,6 +979,7 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 					<span class="callout-icon-holder">
 						<i class="fas fa-exclamation-triangle"></i>
 					</span><!--//icon-holder-->
+					DELETE
 				</h4>
 				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code> </p>
 			</div><!--//content-->
@@ -907,8 +989,15 @@ Código 400: Si faltan datos requeridos (firstName, lastName, email).
 		<p>El cuerpo de la solicitud es JSON</p>
 		  <p>
 			Respuesta:
-			Código 204: la modificación de tarifa se ha eliminado correctamente.
-			Código 404: Si no se encuentra la modificación de tarifa.							
+			<div class="alert alert-primary" role="alert">
+				Código 204: la modificación de tarifa se ha eliminado correctamente.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la modificación de tarifa.			
+			  </div>	
+			
+							
 		  </p>
 	</section><!--//section-->
 </article><!--//docs-article-->
