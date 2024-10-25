@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>CoderDocs - Bootstrap Documentation Template For Software Projects</title>
+    <title>ChannelManager</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="description" content="Bootstrap Documentation Template For Software Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <meta name="description" content="Documentación Base de datos API">
+    <meta name="author" content="CodersLeague">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
     <!-- Google Font -->
@@ -36,7 +36,7 @@
 	                    <span></span>
 	                    <span></span>
 	                </button>
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Coder<span class="text-alt">Docs</span></span></a></div>    
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Coders<span class="text-alt">League</span></span></a></div>    
                 </div><!--//docs-logo-wrapper-->
 	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
 	                <div class="top-search-box d-none d-lg-flex">
@@ -46,13 +46,6 @@
 				        </form>
 	                </div>
 	
-					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-slack fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-product-hunt fa-fw"></i></a></li>
-		            </ul><!--//social-list-->
-		            <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/" class="btn btn-primary d-none d-lg-flex">Download</a>
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
         </div><!--//branding-->
@@ -99,7 +92,7 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">CREATE</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">PUT</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">DELETE</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Modificaciones de Tarifa</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Inventario</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">GET ALL</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">GET By ID</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">CREATE</a></li>
@@ -107,7 +100,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">DELETE</a></li>
 
 
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Inventario</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Modificaciones de Tarifa</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">GET ALL</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">GET By ID</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">CREATE</a></li>
@@ -121,7 +114,7 @@
 		    <div class="container">
 			    <article class="docs-article" id="section-1">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 3 days ago</span></h1>
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Última actualización: 25-10-2024</span></h1>
 					    <section class="docs-intro">
 						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
 						</section><!--//docs-intro-->
@@ -480,9 +473,14 @@
 						
 						<p>
 							Recupera una lista de todos los huéspedes registrados en la base de datos.
-							Respuesta:
-							Código 200: Devuelve un array con los objetos de los huéspedes.
-							Código 500: Error en la recuperación de datos.</p>
+
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de los huéspedes.
+							  </div>
+							<div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.	
+							  </div>		
+</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-2">
@@ -499,11 +497,14 @@
 								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
-						<p>Recupera la información de un huésped específico mediante su ID. Parámetros:
-							id: ID del huésped a recuperar.
-							Respuesta:
-							Código 200: Devuelve el objeto del huésped.
-							Código 404: Si no se encuentra el huésped.
+						<p>Recupera la información de un huésped específico mediante su ID. <p>Parámetros:</p>
+							<p>ID del huésped a recuperar.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto del huésped.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.	
+							  </div>		
 							</p>
 					</section><!--//section-->
 					
@@ -522,8 +523,12 @@
                         </div><!--//callout-block-->
 						<p>Crea un nuevo registro de huésped en la base de datos.</p>
 						<p>El cuerpo de la solicitud es JSON</p>
+						
 						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">[
+							<div class="d-flex justify-content-end">
+								<button class="copyButton btn btn-primary" data-code-id="code1">Copiar</button>
+							  </div>
+							<pre class="shadow-lg rounded"><code class="json hljs" id="code1">[
 	{
 	<span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Nombre"</span>,
 	<span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Apellido"</span>,
@@ -546,31 +551,156 @@
 						  ]
 						  </code></pre>
 						  </div>
+						  <p>
+							<div class="alert alert-primary" role="alert">
+								Código 201: Devuelve el objeto del huésped creado.
+							  </div>
+<div class="alert alert-danger" role="alert">
+	Código 400: Si faltan datos requeridos (firstName, lastName, email).	
+  </div>		
+						  </p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">PUT</h2>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                PUT
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Actualiza la información de un huésped existente mediante su ID</p>
+						<p>Parámetro: ID del huésped a actualizar</p>
+						<p>El cuerpo de la solicitud es JSON</p>
+						<p>Se pueden enviar los mismos campos que para crear un nuevo huésped, omitiendo aquellos que no se deseen actualizar.
+						</p>
+						  <p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto del huésped actualizado.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.		
+							  </div>		
+						  </p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-5">
+						<h2 class="section-heading">DELETE</h2>
+						<div class="callout-block callout-block-danger me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                DELETE
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code> </p>
+                            </div><!--//content-->
+					</div><!--//callout-block-->
+						<p>Elimina un registro de huésped específico de la base de datos</p>
+						<p>Parámetro: ID del huésped a eliminar</p>
+						<p>El cuerpo de la solicitud es JSON</p>
+						  <p>
+							<div class="alert alert-primary" role="alert">
+								Código 204: El huésped se ha eliminado correctamente.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el huésped.		
+							  </div>					
+						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
 			    
 			    <article class="docs-article" id="section-3">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">APIs</h1>
+					    <h1 class="docs-heading">Habitaciones</h1>
 					    <section class="docs-intro">
-						    <p>AQUI VAMOS A EMPEZAR EL MODO PEPE</p>
+						    <p>La API de habitaciones permite gestionar la información de las habitaciones mediante diversas rutas. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-3-1">
-						<h2 class="section-heading">Section Item 3.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET ALL</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									RUTA
+								</h4>
+								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera una lista de todas las habitaciones registradas en la base de datos.
+							Respuesta:
+							Código 200: Devuelve un array con los objetos de las habitaciones.
+							Código 500: Error en la recuperación de datos.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-2">
-						<h2 class="section-heading">Section Item 3.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET BY ID</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									RUTA
+								</h4>
+								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera la información de una habitación específica mediante su ID.
+							Parámetros:
+							id: ID de la habitación a recuperar.
+							Respuesta:
+							Código 200: Devuelve el objeto de la habitación.
+							Código 404: Si no se encuentra la habitación.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-3">
-						<h2 class="section-heading">Section Item 3.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section>
+						<h2 class="section-heading">CREATE</h2>
+						<div class="callout-block callout-block-success">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-thumbs-up"></i>
+									</span><!--//icon-holder-->
+									RUTA
+								</h4>
+								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Crea un nuevo registro de habitación en la base de datos.
+							Cuerpo de la solicitud:</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="json hljs">[
+		{
+		<span class="hljs-attr">"roomNumber"</span>: <span class="hljs-string">"101"</span>,
+		<span class="hljs-attr">"type"</span>: <span class="hljs-string">"SINGLE"</span>,
+		<span class="hljs-attr">"basePrice"</span>: <span class="hljs-string">"100"</span>,
+		<span class="hljs-attr">"capacity"</span>: <span class="hljs-string">"1"</span>,
+		<span class="hljs-attr">"amenities"</span>: <span class="hljs-string">["Wi-Fi", "TV"]</span>,
+		<span class="hljs-attr">"status"</span>: <span class="hljs-string">"AVAILABLE"</span>,
+		<span class="hljs-attr">"description"</span>: <span class="hljs-string">"Habitación cómoda con vista al mar."</span>,
+		<span class="hljs-attr">"images"</span>: <span class="hljs-string">["url_imagen1", "url_imagen2"]</span>
+		
+							}
+							  ]
+							  </code></pre>
+							  </div>
+
+					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-4">
 						<h2 class="section-heading">Section Item 3.4</h2>
@@ -580,24 +710,168 @@
 			    
 			    <article class="docs-article" id="section-4">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Intergrations</h1>
+					    <h1 class="docs-heading">Reservas</h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>La API de reservas permite gestionar la información de las reservas mediante diversas rutas. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-4-1">
-						<h2 class="section-heading">Section Item 4.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET ALL</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									GET
+								</h4>
+								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera una lista de todas las reservas registradas en la base de datos, incluyendo información del huésped y la habitación.</p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de las reservas.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.
+							</div>					
+						  </p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-2">
-						<h2 class="section-heading">Section Item 4.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">GET by ID</h2>
+						<div class="callout-block callout-block-info">
+                            
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									GET
+								</h4>
+								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id</a></code></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Recupera la información de una reserva específica mediante su ID, incluyendo información del huésped y la habitación.</p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto de la reserva.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la reserva.
+							</div>					
+						  </p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-3">
-						<h2 class="section-heading">Section Item 4.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">CREATE</h2>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                POST
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations</a></code></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Crea un nuevo registro de reserva en la base de datos.</p>
+						<p>El cuerpo de la solicitud es JSON</p>
+						<div class="docs-code-block">
+							<div class="d-flex justify-content-end">
+								<button class="copyButton btn btn-primary" data-code-id="code3">Copiar</button>
+							  </div>
+							<pre class="shadow-lg rounded"><code class="json hljs" id="code3">[
+	{
+	<span class="hljs-attr">"bookingReference"</span>: <span class="hljs-string">"REF12345"</span>,
+	<span class="hljs-attr">"guest"</span>: <span class="hljs-string">"ID_GUEST"</span>,
+	<span class="hljs-attr">"room"</span>: <span class="hljs-string">"ID_ROOM"</span>,
+	<span class="hljs-attr">"checkIn"</span>: <span class="hljs-string">"2024-10-01T14:00:00Z"</span>,
+	<span class="hljs-attr">"checkOut"</span>: <span class="hljs-string">"2024-10-05T12:00:00Z"</span>,
+	<span class="hljs-attr">"totalPrice"</span>: <span class="hljs-string">500</span>,
+	<span class="hljs-attr">"channel"</span>: <span class="hljs-string">"DIRECT"</span>,
+	<span class="hljs-attr">"channelReference"</span>: <span class="hljs-string">"CHANNEL_REF"</span>,
+	<span class="hljs-attr">"specialRequests"</span>: <span class="hljs-literal">"Cama extra"</span>,
+						}
+						  ]
+						  </code></pre>
+						  </div>
+						<p>Respuesta:</p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 201: Devuelve el objeto de la reserva creada.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 400: Si faltan datos requeridos (bookingReference, guest, room, checkIn, checkOut, totalPrice, channel).
+							</div>					
+						  </p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-4">
+						<h2 class="section-heading">PUT</h2>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                PUT
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id</a></code></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Actualiza la información de una reserva existente mediante su ID.
+							<br>
+							<b>Parámetros:</b>
+							<br>
+							id: ID de la reserva a actualizar.
+							<br>
+							<b>Cuerpo de la solicitud:</b>
+							<br>
+							Se pueden enviar los mismos campos que para crear una nueva reserva, omitiendo aquellos que no se deseen actualizar.
+							<br>
+							<b>Respuesta:</b></p>
+							<p>
+								<div class="alert alert-primary" role="alert">
+									Código 200: Devuelve el objeto de la reserva actualizada.
+								</div>
+								<div class="alert alert-danger" role="alert">
+									Código 404: Si no se encuentra la reserva.
+								</div>					
+							  </p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-5">
+						<h2 class="section-heading">DELETE</h2>
+						<div class="callout-block callout-block-danger me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                DELETE
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/guests/:id</a></code> </p>
+                            </div><!--//content-->
+						</div><!--//callout-block-->
+						<p>Elimina un registro de reserva específico de la base de datos.
+						<br>
+						<b>Parámetros:</b>
+						<br>
+						id: ID de la reserva a eliminar.
+						<br>
+						<b>Respuesta:</b></p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 204: La reserva se ha eliminado correctamente.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la reserva.
+							</div>					
+						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
@@ -715,14 +989,10 @@
 			    <footer class="footer">
 				    <div class="container text-center py-5">
 			            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-				        <ul class="social-list list-unstyled pt-4 mb-0">
-						    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li> 
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-slack fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-product-hunt fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram fa-fw"></i></a></li>
-				        </ul><!--//social-list-->
+						<p><small class="copyright">Editado con cariño por <strong>CodersLeague</strong> para Generation</small></p>
+				    </div>
+					<div class="container text-center py-5">
+
 				    </div>
 			    </footer>
 		    </div> 
