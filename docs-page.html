@@ -707,7 +707,7 @@
 								<div class="d-flex justify-content-end">
 									<button class="copyButton btn btn-primary" data-code-id="code3">Copiar</button>
 								</div>
-								<pre class="shadow-lg rounded"><code class="json hljs">[
+								<pre class="shadow-lg rounded"><code class="json hljs" id="code3">[
 		{
 		<span class="hljs-attr">"roomNumber"</span>: <span class="hljs-string">"101"</span>,
 		<span class="hljs-attr">"type"</span>: <span class="hljs-string">"SINGLE"</span>,
@@ -743,7 +743,7 @@
 							id: ID de la habitación a actualizar.</p>
 						<p>Cuerpo de la solicitud: <br>
 							Se pueden enviar los mismos campos que para crear una nueva habitación, omitiendo aquellos que no se deseen actualizar.</p>
-						<p>Respuesta: <br>
+						<p>
 							<div class="alert alert-primary" role="alert">
 								Código 200: Devuelve el objeto de la habitación actualizada.
 							  </div>
@@ -772,7 +772,7 @@
 						<p>Parámetro: ID del habitación  a eliminar.</p>
 						<p>El cuerpo de la solicitud es JSON</p>
 						  <p>
-							Respuesta:
+							
 							<div class="alert alert-primary" role="alert">
 								Código 204: El habitación  se ha eliminado correctamente.
 							  </div>
@@ -877,7 +877,7 @@
 						  ]
 						  </code></pre>
 						  </div>
-						<p>Respuesta:</p>
+						
 						<p>
 							<div class="alert alert-primary" role="alert">
 								Código 201: Devuelve el objeto de la reserva creada.
@@ -1124,7 +1124,7 @@
 				<div class="d-flex justify-content-end">
 					<button class="copyButton btn btn-primary" data-code-id="code6">Copiar</button>
 				</div>
-				<pre class="shadow-lg rounded"><code class="json hljs">[
+				<pre class="shadow-lg rounded"><code class="json hljs" id="code6">[
 {
 <span class="hljs-attr">"room"</span>: <span class="hljs-string">"ID_ROOM"</span>,
 <span class="hljs-attr">"startDate"</span>: <span class="hljs-string">"2024-10-01T00:00:00Z"</span>,
@@ -1137,7 +1137,7 @@
 			  ]
 			  </code></pre>
 			  </div>
-<p>Respuesta:
+<p>
 	<div class="alert alert-primary" role="alert">
 		Código 201: Devuelve el objeto de la modificación de tarifa creada.
 	  </div>
@@ -1168,7 +1168,7 @@
 			id: ID de la modificación de tarifa a actualizar.</p>
 		<p>Cuerpo de la solicitud: <br>
 			Se pueden enviar los mismos campos que para crear una nueva modificación de tarifa, omitiendo aquellos que no se deseen actualizar.</p>
-		<p>Respuesta: <br>
+		<p>
 			<div class="alert alert-primary" role="alert">
 				Código 200: Devuelve el objeto de la modificación de tarifa actualizada. 
 			  </div>
@@ -1196,7 +1196,6 @@
 		<p>Parámetro: ID de la modificación de tarifa a eliminar.</p>
 		<p>El cuerpo de la solicitud es JSON</p>
 		  <p>
-			Respuesta:
 			<div class="alert alert-primary" role="alert">
 				Código 204: la modificación de tarifa se ha eliminado correctamente.
 			  </div>
@@ -1204,8 +1203,6 @@
 			<div class="alert alert-danger" role="alert">
 				Código 404: Si no se encuentra la modificación de tarifa.			
 			  </div>	
-			
-							
 		  </p>
 	</section><!--//section-->
 </article><!--//docs-article-->
