@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>ChannelManager</title>
+    <title>Documentación</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="description" content="Documentación Base de datos API">
-    <meta name="author" content="CodersLeague">    
+    <meta name="description" content="Documentación de almacenamiento de la data - Chelenko Lodge">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
     <!-- Google Font -->
@@ -46,6 +46,13 @@
 				        </form>
 	                </div>
 	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-product-hunt fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+		            
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
         </div><!--//branding-->
@@ -115,8 +122,9 @@
 			    <article class="docs-article" id="section-1">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Introduction <span class="docs-time">Última actualización: 25-10-2024</span></h1>
+					    <h1 class="docs-heading">Introducción <span class="docs-time">Last updated: 5 minutes ago</span></h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>Bienvenido a la documentación de la API de Chelenko, un conjunto de rutas diseñadas para interactuar de manera eficiente con la base de datos de gestión de huéspedes, habitaciones, reservas, modificaciones de tarifas e inventario del sistema Chelenko. Esta API está destinada a desarrolladores que buscan integrar y gestionar información hotelera mediante operaciones CRUD (crear, leer, actualizar, eliminar) a través de solicitudes HTTP.</p>
 						</section><!--//docs-intro-->
 						
 						<h5>Github Code Example:</h5>
@@ -527,7 +535,7 @@
 						<div class="docs-code-block">
 							<div class="d-flex justify-content-end">
 								<button class="copyButton btn btn-primary" data-code-id="code1">Copiar</button>
-							  </div>
+							</div>
 							<pre class="shadow-lg rounded"><code class="json hljs" id="code1">[
 	{
 	<span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Nombre"</span>,
@@ -617,7 +625,7 @@
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
-			    
+			    <!-- HABITACIONES -->
 			    <article class="docs-article" id="section-3">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Habitaciones</h1>
@@ -634,15 +642,20 @@
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-info-circle"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									GET 
 								</h4>
-								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
+								<p> <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
 						<p>Recupera una lista de todas las habitaciones registradas en la base de datos.
 							Respuesta:
-							Código 200: Devuelve un array con los objetos de las habitaciones.
-							Código 500: Error en la recuperación de datos.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de las habitaciones.
+							  </div>
+							  <div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.	
+							  </div>	
+							</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-2">
@@ -654,17 +667,24 @@
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-info-circle"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									GET 
 								</h4>
-								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
+								<p> <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
 						<p>Recupera la información de una habitación específica mediante su ID.
 							Parámetros:
 							id: ID de la habitación a recuperar.
 							Respuesta:
-							Código 200: Devuelve el objeto de la habitación.
-							Código 404: Si no se encuentra la habitación.</p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto de la habitación.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la habitación.	
+							  </div>	
+							
+							</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-3">
@@ -676,7 +696,7 @@
 									<span class="callout-icon-holder me-1">
 										<i class="fas fa-thumbs-up"></i>
 									</span><!--//icon-holder-->
-									RUTA
+									POST
 								</h4>
 								<p> GET <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms</a></code></p>
 							</div><!--//content-->
@@ -684,6 +704,9 @@
 						<p>Crea un nuevo registro de habitación en la base de datos.
 							Cuerpo de la solicitud:</p>
 							<div class="docs-code-block">
+								<div class="d-flex justify-content-end">
+									<button class="copyButton btn btn-primary" data-code-id="code3">Copiar</button>
+								</div>
 								<pre class="shadow-lg rounded"><code class="json hljs">[
 		{
 		<span class="hljs-attr">"roomNumber"</span>: <span class="hljs-string">"101"</span>,
@@ -702,9 +725,64 @@
 
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-3-4">
-						<h2 class="section-heading">Section Item 3.4</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">PUT</h2>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                PUT
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p> Actualiza la información de una habitación existente mediante su ID.</p>
+						<p>Parámetros: <br>
+							id: ID de la habitación a actualizar.</p>
+						<p>Cuerpo de la solicitud: <br>
+							Se pueden enviar los mismos campos que para crear una nueva habitación, omitiendo aquellos que no se deseen actualizar.</p>
+						<p>Respuesta: <br>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto de la habitación actualizada.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la habitación.	
+							  </div>	
+							 <br>
+							
+						</p>
+					</section><!--//section-->
+					<section class="docs-section" id="item-2-5">
+						<h2 class="section-heading">DELETE</h2>
+						<div class="callout-block callout-block-danger me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                DELETE
+	                            </h4>
+                                <p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rooms/:id</a></code> </p>
+                            </div><!--//content-->
+					</div><!--//callout-block-->
+						<p>Elimina un registro de habitación  específico de la base de datos.</p>
+						<p>Parámetro: ID del habitación  a eliminar.</p>
+						<p>El cuerpo de la solicitud es JSON</p>
+						  <p>
+							Respuesta:
+							<div class="alert alert-primary" role="alert">
+								Código 204: El habitación  se ha eliminado correctamente.
+							  </div>
+
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra el habitación.	
+							  </div>	
+							
+														
+						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
@@ -799,7 +877,6 @@
 						  ]
 						  </code></pre>
 						  </div>
-						<p>Respuesta:</p>
 						<p>
 							<div class="alert alert-primary" role="alert">
 								Código 201: Devuelve el objeto de la reserva creada.
@@ -833,7 +910,6 @@
 							<br>
 							Se pueden enviar los mismos campos que para crear una nueva reserva, omitiendo aquellos que no se deseen actualizar.
 							<br>
-							<b>Respuesta:</b></p>
 							<p>
 								<div class="alert alert-primary" role="alert">
 									Código 200: Devuelve el objeto de la reserva actualizada.
@@ -863,7 +939,6 @@
 						<br>
 						id: ID de la reserva a eliminar.
 						<br>
-						<b>Respuesta:</b></p>
 						<p>
 							<div class="alert alert-primary" role="alert">
 								Código 204: La reserva se ha eliminado correctamente.
@@ -1036,28 +1111,175 @@
 			    </article><!--//docs-article-->
 			    
 			    
-		        <article class="docs-article" id="section-6">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Web</h1>
-					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-6-1">
-						<h2 class="section-heading">Section Item 6.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-6-2">
-						<h2 class="section-heading">Section Item 6.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-6-3">
-							<h2 class="section-heading">Section Item 6.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
+ <!-- Modificaciones de Tarifa -->
+ <article class="docs-article" id="section-6">
+	<header class="docs-header">
+		<h1 class="docs-heading">Modificaciones de Tarifa</h1>
+		<section class="docs-intro">
+			<p>La API de modificaciones de tarifa permite gestionar la información relacionada con cambios en las tarifas de las habitaciones. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
+		</section><!--//docs-intro-->
+	</header>
+	 <section class="docs-section" id="item-6-1">
+		<h2 class="section-heading">GET ALL</h2>
+		<div class="callout-block callout-block-info">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-info-circle"></i>
+					</span><!--//icon-holder-->
+					GET
+				</h4>
+				<p>  <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p> Recupera una lista de todas las modificaciones de tarifa registradas en la base de datos, incluyendo información de la habitación asociada.
+			Respuesta:
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve un array con los objetos de las modificaciones de tarifa.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 500: Error en la recuperación de datos.
+			  </div>	
+			
+			</p>
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-6-2">
+		<h2 class="section-heading">GET BY ID</h2>
+		<div class="callout-block callout-block-info">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-info-circle"></i>
+					</span><!--//icon-holder-->
+					GET 
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Recupera la información de una habitación tarifa específica mediante su ID, incluyendo información de la habitación asociada.
+			Parámetros:
+			id: ID de la  tarifa a recuperar.
+			Respuesta:
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve el objeto de la tarifa a recuperar.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la modificación de tarifa.	
+			  </div>	
+			
+			</p>
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-6-3">
+		<h2 class="section-heading">CREATE</h2>
+		<div class="callout-block callout-block-success">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-thumbs-up"></i>
+					</span><!--//icon-holder-->
+			POST
+				</h4>
+				<p> <code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Crea un nuevo registro de modificación de tarifa en la base de datos. <br>
+			Cuerpo de la solicitud:</p>
+			<div class="docs-code-block">
+				<div class="d-flex justify-content-end">
+					<button class="copyButton btn btn-primary" data-code-id="code6">Copiar</button>
+				</div>
+				<pre class="shadow-lg rounded"><code class="json hljs">[
+{
+<span class="hljs-attr">"room"</span>: <span class="hljs-string">"ID_ROOM"</span>,
+<span class="hljs-attr">"startDate"</span>: <span class="hljs-string">"2024-10-01T00:00:00Z"</span>,
+<span class="hljs-attr">"endDate"</span>: <span class="hljs-string">"2024-10-05T00:00:00Z"</span>,
+<span class="hljs-attr">"modificationType"</span>: <span class="hljs-string">"PRICE_CHANGE"</span>,
+<span class="hljs-attr">"value"</span>: <span class="hljs-string">120</span>,
+<span class="hljs-attr">"reason"</span>: <span class="hljs-string">"Aumento de tarifas para temporada alta"</span>,
+<span class="hljs-attr">"channel"</span>: <span class="hljs-string">"DIRECT"</span>
+			}
+			  ]
+			  </code></pre>
+			  </div>
+<p>Respuesta:
+	<div class="alert alert-primary" role="alert">
+		Código 201: Devuelve el objeto de la modificación de tarifa creada.
+	  </div>
+
+	<div class="alert alert-danger" role="alert">
+		Código 400: Si faltan datos requeridos (room, startDate, endDate, modificationType, value, channel).	
+	  </div>	
+	
+	</p>
+
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-6-4">
+		<h2 class="section-heading">PUT</h2>
+		<div class="callout-block callout-block-success">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-thumbs-up"></i>
+					</span><!--//icon-holder-->
+					PUT
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p> Actualiza la información de una habitación existente mediante su ID.</p>
+		<p>Parámetros: <br>
+			id: ID de la modificación de tarifa a actualizar.</p>
+		<p>Cuerpo de la solicitud: <br>
+			Se pueden enviar los mismos campos que para crear una nueva modificación de tarifa, omitiendo aquellos que no se deseen actualizar.</p>
+		<p>Respuesta: <br>
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve el objeto de la modificación de tarifa actualizada. 
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la modificación de tarifa.
+			  </div>	
+			
+		</p>
+	</section><!--//section-->
+	<section class="docs-section" id="item-6-5">
+		<h2 class="section-heading">DELETE</h2>
+		<div class="callout-block callout-block-danger me-1">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder">
+						<i class="fas fa-exclamation-triangle"></i>
+					</span><!--//icon-holder-->
+					DELETE
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/rate-modifications/:id</a></code> </p>
+			</div><!--//content-->
+	</div><!--//callout-block-->
+		<p>Elimina un registro de una modificación de tarifa  específico de la base de datos.</p>
+		<p>Parámetro: ID de la modificación de tarifa a eliminar.</p>
+		<p>El cuerpo de la solicitud es JSON</p>
+		  <p>
+			Respuesta:
+			<div class="alert alert-primary" role="alert">
+				Código 204: la modificación de tarifa se ha eliminado correctamente.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la modificación de tarifa.			
+			  </div>	
+			
+							
+		  </p>
+	</section><!--//section-->
+</article><!--//docs-article-->
 			    
 			    
 			    <footer class="footer">
