@@ -736,12 +736,15 @@
 								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
-						<p>Recupera una lista de todas las reservas registradas en la base de datos, incluyendo información del huésped y la habitación.
-							<br>
-						<b>	Código 200: Devuelve un array con los objetos de las reservas.
-							<br>
-							Código 500: Error en la recuperación de datos.</b>
-						</p>
+						<p>Recupera una lista de todas las reservas registradas en la base de datos, incluyendo información del huésped y la habitación.</p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve un array con los objetos de las reservas.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 500: Error en la recuperación de datos.
+							</div>					
+						  </p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-2">
@@ -758,18 +761,15 @@
 								<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/reservations/:id</a></code></p>
 							</div><!--//content-->
 						</div><!--//callout-block-->
-						<p>Recupera la información de una reserva específica mediante su ID, incluyendo información del huésped y la habitación.
-							<br>
-							Parámetros:
-							<br>
-							<b>id: ID de la reserva a recuperar.</b>
-							<br>
-							Respuesta:
-							<br>
-							<b>Código 200: Devuelve el objeto de la reserva.
-							<br>
-							Código 404: Si no se encuentra la reserva.</b>
-						</b></p>
+						<p>Recupera la información de una reserva específica mediante su ID, incluyendo información del huésped y la habitación.</p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 200: Devuelve el objeto de la reserva.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la reserva.
+							</div>					
+						  </p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-3">
@@ -788,7 +788,10 @@
 						<p>Crea un nuevo registro de reserva en la base de datos.</p>
 						<p>El cuerpo de la solicitud es JSON</p>
 						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">[
+							<div class="d-flex justify-content-end">
+								<button class="copyButton btn btn-primary" data-code-id="code3">Copiar</button>
+							  </div>
+							<pre class="shadow-lg rounded"><code class="json hljs" id="code3">[
 	{
 	<span class="hljs-attr">"bookingReference"</span>: <span class="hljs-string">"REF12345"</span>,
 	<span class="hljs-attr">"guest"</span>: <span class="hljs-string">"ID_GUEST"</span>,
@@ -803,11 +806,15 @@
 						  ]
 						  </code></pre>
 						  </div>
-						<p><b>Respuesta:</b>
-							<br>
-							Código 201: Devuelve el objeto de la reserva creada.
-							<br>
-							Código 400: Si faltan datos requeridos (bookingReference, guest, room, checkIn, checkOut, totalPrice, channel).</p>
+						<p>Respuesta:</p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 201: Devuelve el objeto de la reserva creada.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 400: Si faltan datos requeridos (bookingReference, guest, room, checkIn, checkOut, totalPrice, channel).
+							</div>					
+						  </p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-4-4">
@@ -833,12 +840,15 @@
 							<br>
 							Se pueden enviar los mismos campos que para crear una nueva reserva, omitiendo aquellos que no se deseen actualizar.
 							<br>
-							<b>Respuesta:</b>
-							<br>
-							Código 200: Devuelve el objeto de la reserva actualizada.
-							<br>
-							Código 404: Si no se encuentra la reserva.
-							</p>
+							<b>Respuesta:</b></p>
+							<p>
+								<div class="alert alert-primary" role="alert">
+									Código 200: Devuelve el objeto de la reserva actualizada.
+								</div>
+								<div class="alert alert-danger" role="alert">
+									Código 404: Si no se encuentra la reserva.
+								</div>					
+							  </p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-4-5">
@@ -860,12 +870,15 @@
 						<br>
 						id: ID de la reserva a eliminar.
 						<br>
-						<b>Respuesta:</b>
-						<br>
-						Código 204: La reserva se ha eliminado correctamente.
-						<br>
-						Código 404: Si no se encuentra la reserva.
-						</p>
+						<b>Respuesta:</b></p>
+						<p>
+							<div class="alert alert-primary" role="alert">
+								Código 204: La reserva se ha eliminado correctamente.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								Código 404: Si no se encuentra la reserva.
+							</div>					
+						  </p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
