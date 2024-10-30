@@ -64,8 +64,6 @@
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introducción</a></li>
 
-
-
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fa-solid fa-person"></i></span>Huéspedes</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">GET All</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">GET by id</a></li>
@@ -73,19 +71,20 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">PUT</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">DELETE</a></li>
 
-
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fa-solid fa-bed"></i></span>Habitaciones</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">GET ALL</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">GET by id</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">CREATE</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">PUT</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">DELETE</a></li>
+
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fa-solid fa-check"></i></span>Reservas</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">GET ALL</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">GET By ID</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">CREATE</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">PUT</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">DELETE</a></li>
+
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fa-solid fa-bars"></i></i></span>Inventario</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">GET ALL</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">GET By ID</a></li>
@@ -93,13 +92,19 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">PUT</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">DELETE</a></li>
 
-
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fa-solid fa-money-bill-wave"></i></span>Modificaciones de Tarifa</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">GET ALL</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">GET By ID</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">CREATE</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-4">PUT</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-5">DELETE</a></li>
+
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fa-solid fa-money-bill-wave"></i></span>Transbank</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">GET ALL</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">GET By ID</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">CREATE</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-4">PUT</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-5">DELETE</a></li>
 
 
 		    </nav><!--//docs-nav-->
@@ -941,6 +946,172 @@
 		  </p>
 	</section><!--//section-->
 </article><!--//docs-article-->
+
+
+<!--Inicio Transbank -->
+<article class="docs-article" id="section-7">
+	<header class="docs-header">
+		<h1 class="docs-heading">Transbank</h1>
+		<section class="docs-intro">
+			<p>La API de Transbank permite gestionar la información de las transacciones mediante diversas rutas. A continuación, se describen las rutas disponibles, sus métodos HTTP y cómo utilizarlas.</p>
+		</section><!--//docs-intro-->
+		
+	</header>
+	 <section class="docs-section" id="item-7-1">
+		<h2 class="section-heading">GET ALL </h2>
+		<div class="callout-block callout-block-info">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-info-circle"></i>
+					</span><!--//icon-holder-->
+					GET
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		
+		<p>
+			Recupera una lista de todas las transacciones registradas en la base de datos.
+
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve un array con los objetos de las transacciones.
+			  </div>
+			<div class="alert alert-danger" role="alert">
+				Código 500: Error en la recuperación de datos.	
+			  </div>		
+</p>
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-7-2">
+		<h2 class="section-heading">GET by ID</h2>
+		<div class="callout-block callout-block-info">
+			
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-info-circle"></i>
+					</span><!--//icon-holder-->
+					GET
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank/:id</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Recupera la información de una transacción específica mediante su ID. <p>Parámetros:</p>
+			<p>ID la transacción a recuperar.</p>
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve el objeto de la transacción.
+			  </div>
+			  <div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la transacción.	
+			  </div>		
+			</p>
+	</section><!--//section-->
+	
+	<section class="docs-section" id="item-7-3">
+		<h2 class="section-heading">CREATE</h2>
+		<div class="callout-block callout-block-success">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-thumbs-up"></i>
+					</span><!--//icon-holder-->
+					POST
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Crea un nuevo registro de transacción en la base de datos.</p>
+		<p>El cuerpo de la solicitud es JSON</p>
+		
+		<div class="docs-code-block">
+			<div class="d-flex justify-content-end">
+				<button class="copyButton btn btn-primary" data-code-id="code1">Copiar</button>
+			</div>
+			<pre class="shadow-lg rounded"><code class="json hljs" id="code1">[
+{
+<span class="hljs-attr">"vci"</span>: <span class="hljs-string">"TSY"</span>,
+<span class="hljs-attr">"amount"</span>: <span class="hljs-string">10000</span>,
+<span class="hljs-attr">"status"</span>: <span class="hljs-string">"AUTHORIZED"</span>,
+<span class="hljs-attr">"buy_order"</span>: <span class="hljs-string">"ordenCompra12345678"</span>,
+<span class="hljs-attr">"session_id"</span>: <span class="hljs-string">"sesion1234557545"</span>,
+<span class="hljs-attr">"card_detail"</span>: {
+	<span class="hljs-attr">"card_number"</span>: <span class="hljs-number">6623</span>,
+  },
+<span class="hljs-attr">"accounting_date"</span>: <span class="hljs-string">"0522"</span>,
+<span class="hljs-attr">"transaction_date"</span>: <span class="hljs-literal">2019-05-22T16:41:21.063Z</span>,
+<span class="hljs-attr">"authorization_code"</span>: <span class="hljs-string">"1213"</span>,
+<span class="hljs-attr">"payment_type_code"</span>: <span class="hljs-string">"VN"</span>,
+<span class="hljs-attr">"response_code"</span>: <span class="hljs-string">0</span>,
+<span class="hljs-attr">"installments_number"</span>: <span class="hljs-string">0</span>,
+		}
+		  ]
+		  </code></pre>
+		  </div>
+		  <p>
+			<div class="alert alert-primary" role="alert">
+				Código 201: Devuelve el objeto la transacción creado.
+			  </div>
+<div class="alert alert-danger" role="alert">
+Código 400: Si faltan datos requeridos.	
+</div>		
+		  </p>
+	</section><!--//section-->
+
+	<section class="docs-section" id="item-7-4">
+		<h2 class="section-heading">PUT</h2>
+		<div class="callout-block callout-block-success">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder me-1">
+						<i class="fas fa-thumbs-up"></i>
+					</span><!--//icon-holder-->
+					PUT
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank/:id</a></code></p>
+			</div><!--//content-->
+		</div><!--//callout-block-->
+		<p>Actualiza la información de una transacción existente mediante su ID</p>
+		<p>Parámetro: ID de la transacción a actualizar</p>
+		<p>El cuerpo de la solicitud es JSON</p>
+		<p>Se pueden enviar los mismos campos que para crear una nuevo transacción, omitiendo aquellos que no se deseen actualizar.
+		</p>
+		  <p>
+			<div class="alert alert-primary" role="alert">
+				Código 200: Devuelve el objeto de la transacción actualizado.
+			  </div>
+			  <div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la transacción.		
+			  </div>		
+		  </p>
+	</section><!--//section-->
+	<section class="docs-section" id="item-7-5">
+		<h2 class="section-heading">DELETE</h2>
+		<div class="callout-block callout-block-danger me-1">
+			<div class="content">
+				<h4 class="callout-title">
+					<span class="callout-icon-holder">
+						<i class="fas fa-exclamation-triangle"></i>
+					</span><!--//icon-holder-->
+					DELETE
+				</h4>
+				<p><code><a href="http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank/:id">http://chelenko-data.sa-east-1.elasticbeanstalk.com/api/transbank/:id</a></code> </p>
+			</div><!--//content-->
+	</div><!--//callout-block-->
+		<p>Elimina un registro de la transacción específica de la base de datos</p>
+		<p>Parámetro: ID de la transacción a eliminar</p>
+		<p>El cuerpo de la solicitud es JSON</p>
+		  <p>
+			<div class="alert alert-primary" role="alert">
+				Código 204: La transacción se ha eliminado correctamente.
+			  </div>
+
+			<div class="alert alert-danger" role="alert">
+				Código 404: Si no se encuentra la transacción.		
+			  </div>					
+		  </p>
+	</section><!--//section-->
 			    
 			    
 			    <footer class="footer">
